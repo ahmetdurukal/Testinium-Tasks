@@ -8,7 +8,7 @@ public class Task_1 {
         short testShort = 327;
         //(-2.147.483.648) ~ (2.147.483.647)
         int testInt = 1058;
-        //10 haneden daha büyük sayılar için kullanılabilir. (Ör: TC No)
+        //10 haneden daha büyük sayılar için kullanılabilir.(Ör: TC No)
         long testLong = 12042;
         //Ondalıklı sayı kullanımında sayı sonuna "f" karakteri konularak kullanılır.
         float testFloat = 42.8f;
