@@ -1,6 +1,4 @@
-import java.util.Scanner;
-
-public class Task_7 {
+public class Task7 {
     public static void main(String[] args) {
         String sentence = "Ahmet,Mehmet,Faruk,Yavuz iyi insanlardır.";
         String[] array = sentence.split(",");

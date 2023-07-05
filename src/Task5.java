@@ -1,5 +1,4 @@
-import java.util.Arrays;
-public class Task_5 {
+public class Task5 {
     public static void main(String[] args) {
         String[] cities = {"Bursa", "İstanbul", " Ankara", " Adana", "İzmir"};
         System.out.println("Array'in ilk elemanı: " + cities[0]);

@@ -1,6 +1,6 @@
 import java.util.Arrays;
 import java.util.Scanner;
-public class Task_6 {
+public class Task6 {
     public static void main(String[] args) {
         Double[] numbers = new Double[10];
         Scanner number = new Scanner(System.in);
