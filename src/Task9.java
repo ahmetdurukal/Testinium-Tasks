@@ -1,8 +1,10 @@
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
+
 public class Task9 {
     public static void main(String[] args) {
-        ArrayList<String> arrayList = new ArrayList<String>();
+        List<String> arrayList = new ArrayList<>();
         Scanner input = new Scanner(System.in);
         boolean answer = false;
         for (int loop1 = 7; loop1 > 0; loop1--) {
@@ -19,18 +21,14 @@ public class Task9 {
             for (int loop2 = 0; loop2 < arrayList.size(); loop2++) {
                 answer = arrayList.contains(searchWord);
             }
-            if (answer == true) {
-                System.out.println("Doğru");
-            } else if (answer == false) {
-                System.out.println("Yanlış");
+            if (answer) {
+                System.out.println("Var");
+            } else if (!answer) {
+                System.out.println("Yok");
             }
         }
         while (answer != true);
 
-        if (answer == true) {
-            System.out.println("Var");
-        } else {
-            System.out.println("Yok");
-        }
+
     }
 }
