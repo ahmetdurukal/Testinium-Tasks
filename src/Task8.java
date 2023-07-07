@@ -3,25 +3,35 @@ import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 import java.util.*;
+import java.util.ArrayList;
 
 public class Task8 {
     public static void main(String[] args) {
+        int lastLoop = 0 ;
+        int lastLoop1 = 0 ;
         int[] numbers1 = new int[10];
         int[] numbers2 = new int[10];
         List<Integer> sameNumbers = new ArrayList<>();
         List<Integer> notSameNumbers = new ArrayList<>();
-        List<Integer> notSameNumbers2 = new ArrayList<>();
+        List<Integer> notSameNumbers2 = new ArrayList<Integer>();
         Random rand = new Random();
 
         for (int a = 0; a < numbers1.length; a++) {
             numbers1[a] = rand.nextInt(10);
-            System.out.print(numbers1[a]+"-");
+            System.out.print(numbers1[a]);
+            if (a < numbers2.length - 1) {
+                System.out.print("-");
+            }
         }
 
         System.out.println();
         for (int b = 0; b < numbers2.length; b++) {
             numbers2[b] = rand.nextInt(10);
-            System.out.print(numbers2[b]+"-");
+            System.out.print(numbers2[b]);
+            if (b < numbers2.length - 1) {
+                System.out.print("-");
+
+            }
         }
         System.out.println();
 
@@ -34,6 +44,19 @@ public class Task8 {
                 }
             }
         }
+        Collections.sort(sameNumbers);
+
+        for (int i = 0; i<=sameNumbers.size(); i++)
+            if (sameNumbers.get(i) < sameNumbers.get(i++)){
+                continue;
+            }
+            else{
+                sameNumbers.remove(i);
+            }
+
+
+
+
         System.out.println("num1 ve num 2 de ortak olan elemanlar: " + sameNumbers);
         // num1 de olup num2 de olmayanlar için:
         for (int i = 0; i < numbers1.length; i++) {
@@ -49,11 +72,14 @@ public class Task8 {
                 notSameNumbers.add(numbers1[i]);
             }
         }
+        Collections.sort(notSameNumbers);
+
+
+
         System.out.println("num1 de olup num2 de olmayan elemanlar: " + notSameNumbers);
         // num2 de olup num1 de olmayanlar için:
         for (int i = 0; i < numbers2.length; i++) {
             boolean found = false;
-
             for (int j = 0; j < numbers1.length; j++) {
                 if (numbers2[i] == numbers1[j]) {
                     found = true;
@@ -64,8 +90,9 @@ public class Task8 {
                 notSameNumbers2.add(numbers2[i]);
             }
         }
-        System.out.println("num2 de olup num1 de olmayan elemanlar: " + notSameNumbers2);
+        Collections.sort(notSameNumbers2);
 
+        System.out.println("num2 de olup num1 de olmayan elemanlar: " + notSameNumbers2);
     }
 }
 
