@@ -1,13 +1,20 @@
 import java.util.Arrays;
 import java.lang.Integer;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.Set;
+
 public class Task11 {
     public static void main(String[] args){
-        //bir integer listemiz var bunun içerisindeki
-        // en büyük sayıyı ve en küçük sayıyı bulalım
-        // örnek verirsem 12,231,565,7 burada 565 ve 7 yi nasıl buluruz
-        int[] numList = {12,231,565,7};
-        System.out.println(Arrays.stream(numList).max());
-        System.out.println(Arrays.stream(numList).min());
+        Set<Integer> numList = new HashSet<Integer>();
+
+        numList.add(12);
+        numList.add(231);
+        numList.add(7);
+        numList.add(565);
+
+        System.out.println(Collections.max(numList));
+        System.out.println(Collections.min(numList));
 
     }
 }
