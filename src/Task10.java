@@ -1,16 +1,14 @@
-import java.util.List;
-import java.util.ArrayList;
+import java.util .*;
 public class Task10 {
-    public static void main(String[] args){
-        List<String> reverseList=new ArrayList<>();
-        String[] list={"Ahmet","Nazım","Mehmet"};
-        for (String i:list){
-            System.out.print(i+" ");
+    public static void main(String[] args) {
+        Map<Integer,String> names = new TreeMap <Integer, String>();
+
+        names.put(1,"Ahmet");
+        names.put(2,"Nazım");
+        names.put(3,"Mehmet");
+
+        for(int i=3;i>0;i--){
+            System.out.println(names.get(i));
         }
-        System.out.println();
-        for (int i =list.length-1;i>=0;i--){
-            reverseList.add(list[i]);
-        }
-        System.out.println(reverseList);
     }
 }
