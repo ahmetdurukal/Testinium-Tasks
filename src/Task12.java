@@ -1,24 +1,16 @@
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class Task12 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        //bir listemiz olucak string ya da integer farketmez bu on elemanlı olsun kendin doldurabilirsin
-        // bir de scannerla input alacaksın ve bu listenin içerisinde input kaç tane var onu ekrana yazdırcaksın
-        //örnek verirsem 1,1,1,3,4,5 diye listemiz var input 1 olunca 3 tane yazıcak input 6 olunca hiç yok yazıcak
-        //bunları yapınca map kütüphanesine geçeceğiz
-        List<Integer> numlist = new ArrayList<>();
-        numlist.add(1);
-        numlist.add(1);
-        numlist.add(1);
-        numlist.add(3);
-        numlist.add(3);
-        numlist.add(5);
+        Map<Integer,Integer> numlist = new TreeMap();
+        numlist.put(1,1);
+        numlist.put(2,1);
+        numlist.put(3,1);
+        numlist.put(4,3);
+        numlist.put(5,4);
+        numlist.put(6,5);
 
-        Collections.sort(numlist);
         System.out.println(numlist);
         boolean answer = false;
         int counter = 0;
@@ -26,7 +18,7 @@ public class Task12 {
             System.out.println("Listede aradığınız sayıyı girin: ");
             Integer scanner = input.nextInt();
 
-            for (int i = 0; i < numlist.size(); i++) {
+            for (int i = 0; i < (numlist.size()+1); i++) {
                 if (numlist.get(i) == scanner) {
                     counter++;
 
