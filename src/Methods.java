@@ -1,10 +1,10 @@
 public class Methods {
     public static void main(String[] args) {
-        findNumber();
+        int[] numbers = new int[] {10,20,30,40,50,70,90,100};
+        findNumber(numbers, 30);
     }
-    public static void findNumber(){
-        int[] numbers = new int[] {1,2,3,4,5,7,9,0};
-        int wanted = 5;
+    public static void findNumber(int[] numbers, int wanted){
+
         boolean isThere = false;
 
         for (int number : numbers){
