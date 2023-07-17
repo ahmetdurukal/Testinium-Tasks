@@ -1,6 +1,6 @@
 import java.util.*;
 import java.util.Scanner;
-public class ExMethod {
+public class LibraryAutomation {
     public static void main(String[] args) {
         List<String> bookList = new ArrayList<>();
         addBook(bookList);
