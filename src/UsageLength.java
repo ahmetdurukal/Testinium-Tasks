@@ -1,4 +1,4 @@
-public class Task5 {
+public class UsageLength {
     public static void main(String[] args) {
         String[] cities = {"Bursa", "İstanbul", " Ankara", " Adana", "İzmir"};
         System.out.println("Array'in ilk elemanı: " + cities[0]);

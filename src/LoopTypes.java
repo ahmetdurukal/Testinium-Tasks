@@ -1,7 +1,7 @@
 import java.util.Random;
 import java.util.Scanner;
 
-public class Task4 {
+public class LoopTypes {
     public static void main(String[] args) {
 
         Random rand = new Random();

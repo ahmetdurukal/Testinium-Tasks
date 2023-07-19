@@ -1,4 +1,4 @@
-public class Methods {
+public class ListStructure {
     public static void main(String[] args) {
         int[] numbers = new int[] {10,20,30,40,50,70,90,100};
         findNumber(numbers, 30);

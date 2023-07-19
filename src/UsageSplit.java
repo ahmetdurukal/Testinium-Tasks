@@ -1,4 +1,4 @@
-public class Task7 {
+public class UsageSplit {
     public static void main(String[] args) {
         String sentence = "Ahmet,Mehmet,Faruk,Yavuz iyi insanlardır.";
         String[] array = sentence.split(",");
