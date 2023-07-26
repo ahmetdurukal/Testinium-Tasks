@@ -28,6 +28,7 @@ public class Product {
     public Product(){}
 
 
+
     public Product(int id, int categoryId, String productName, double unitPrice, short unitsInStoch, String quantityPerUnit) {
         this.id = id;
         this.categoryId = categoryId;
