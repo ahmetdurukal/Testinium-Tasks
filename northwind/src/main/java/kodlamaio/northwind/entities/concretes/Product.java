@@ -7,10 +7,11 @@ import lombok.*;
 //@Data
 @Entity
 @Table(name = "products")
-
+//@AllArgsConstructor
+//@NoArgsConstructor
 public class Product {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "product_id")
     private int id;
     @Column(name = "category_id")
