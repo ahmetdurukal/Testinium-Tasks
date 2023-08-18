@@ -46,7 +46,6 @@ public class BookManager implements BookService {
         bookDao.save(book);
         return id+"id'li Kitap güncellendi";
     }
-
 //    @Override
 //    public Integer addBookWithAuthorId(int id,AuthorManager authorManager) {
 //        authorManager.matchBookToAuthor(id);
@@ -54,8 +53,6 @@ public class BookManager implements BookService {
 //
 //        return null;
 //    }
-
-
     @Override
     public List<Book> getAll(){
         return bookDao.findAll();

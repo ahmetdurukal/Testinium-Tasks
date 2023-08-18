@@ -5,7 +5,6 @@ import kodlamaio.northwind.core.utilities.results.DataResult;
 import kodlamaio.northwind.core.utilities.results.Result;
 import kodlamaio.northwind.entities.concretes.Product;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
