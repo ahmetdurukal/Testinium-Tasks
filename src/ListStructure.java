@@ -4,7 +4,6 @@ public class ListStructure {
         findNumber(numbers, 30);
     }
     public static void findNumber(int[] numbers, int wanted){
-
         boolean isThere = false;
 
         for (int number : numbers){
