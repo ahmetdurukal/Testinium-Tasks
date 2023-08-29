@@ -11,8 +11,7 @@ import java.util.List;
 @JsonSerialize
 @Entity
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
+
 @Table(name = "author")
 public class Author {
 
@@ -29,4 +28,56 @@ public class Author {
     @JsonIgnore
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "author")
     private List<Book> books;
+
+    public Author(int id, String authorName, String authorLastName, String age, List<Book> books) {
+        this.id = id;
+        this.authorName = authorName;
+        this.authorLastName = authorLastName;
+        this.age = age;
+        this.books = books;
+    }
+
+    public Author() {
+
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getAuthorName() {
+        return authorName;
+    }
+
+    public void setAuthorName(String authorName) {
+        this.authorName = authorName;
+    }
+
+    public String getAuthorLastName() {
+        return authorLastName;
+    }
+
+    public void setAuthorLastName(String authorLastName) {
+        this.authorLastName = authorLastName;
+    }
+
+    public String getAge() {
+        return age;
+    }
+
+    public void setAge(String age) {
+        this.age = age;
+    }
+
+    public List<Book> getBooks() {
+        return books;
+    }
+
+    public void setBooks(List<Book> books) {
+        this.books = books;
+    }
 }

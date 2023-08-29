@@ -20,6 +20,18 @@ public class BookController {
     public CreateBookResponse add (@RequestBody CreateBookRequest request){
         return bookService.add(request);
     }
+   /* {
+        "name": "ahmet",
+            "type":"roman",
+            "releaseDate":"1885",
+            "author": {
+        "id": 1,
+                "authorName": "tolstoy",
+                "authorLastName": "lev",
+                "age": "30"
+    }
+    }
+    */
     @DeleteMapping("/delete")
     public String delete(@RequestParam("id") int id){
         return bookService.delete(id);

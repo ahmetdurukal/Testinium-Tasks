@@ -1,8 +1,6 @@
 package kodlamaio.northwind.entities.concretes;
-
 import jakarta.persistence.*;
 import lombok.*;
-
 //import lombok.Data;
 //@Data
 @Entity
@@ -25,11 +23,7 @@ public class Product {
     private short unitsInStoch;
     @Column(name = "quantity_per_unit")
     private String quantityPerUnit;
-
     public Product(){}
-
-
-
     public Product(int id, int categoryId, String productName, double unitPrice, short unitsInStoch, String quantityPerUnit) {
         this.id = id;
         this.categoryId = categoryId;

@@ -20,3 +20,4 @@ public class ShoppingMain {
         userService.login(user1, "durukalahmet@gmail.com", "123456");
     }
 }
+

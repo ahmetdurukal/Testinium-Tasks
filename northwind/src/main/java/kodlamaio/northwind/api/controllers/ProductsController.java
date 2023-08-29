@@ -16,7 +16,6 @@ import java.util.List;
 public class ProductsController {
     private final ProductService productService;
 
-
     @GetMapping("/getall")
     public DataResult<List<Product>> getAll(){
         //kodlama.io/api/products/getall

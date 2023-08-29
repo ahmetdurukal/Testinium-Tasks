@@ -1,22 +1,21 @@
-package library.services.concretes;
+package org.example.services.concretes;
 
-import library.dto.CreateAuthorRequest;
-import library.dto.CreateAuthorResponse;
-import library.model.concretes.Author;
-import library.model.concretes.Book;
-import library.repository.abstracts.AuthorDao;
-import library.services.abstracts.AuthorService;
 import lombok.RequiredArgsConstructor;
+import org.example.dto.CreateAuthorRequest;
+import org.example.dto.CreateAuthorResponse;
+import org.example.model.concretes.Author;
+import org.example.repository.abstracts.AuthorDao;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
-public class AuthorManager implements AuthorService {
+public class AuthorManager {
     private final AuthorDao authorDao;
 
-    @Override
+
     public CreateAuthorResponse addAuthor(CreateAuthorRequest request) {
         Author author = new Author();
         author.setAuthorName(request.getAuthorName());
@@ -31,14 +30,14 @@ public class AuthorManager implements AuthorService {
                 .build();
     }
 
-    @Override
-    public String deleteAuthor(int id) {
+
+    public String deleteAuthor(String id) {
         authorDao.deleteById(id);
         return id + " id'li yazar silindi.";
     }
 
-    @Override
-    public String updateAuthor(int id, Author newAuthor) {
+
+    public String updateAuthor(String id, Author newAuthor) {
         Author author = getById(id);
         author.setAuthorName(newAuthor.getAuthorName());
         author.setAuthorLastName(newAuthor.getAuthorLastName());
@@ -47,14 +46,19 @@ public class AuthorManager implements AuthorService {
         return id + "id'li yazar güncellendi";
     }
 
-    @Override
-    public Author getById(int id) {
-        return authorDao.getReferenceById(id);
+
+    public Author getById(String id) {
+        return authorDao.findById(id).get();
     }
 
-    @Override
-    public List<Author> getAllAuthor() {
-        return authorDao.findAll();
+
+    public List<CreateAuthorResponse> getAllAuthor() {
+        return authorDao.findAll().stream().map(author -> {
+            CreateAuthorResponse dto = new CreateAuthorResponse();
+            dto.setAuthorName(author.getAuthorName());
+            dto.setAuthorLastName(author.getAuthorLastName());
+            return dto;
+        }).collect(Collectors.toList());
     }
 //    @Override
 //    public String matchBookToAuthor(int id){
