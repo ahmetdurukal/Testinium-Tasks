@@ -1,7 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-
 public class Task9 {
     public static void main(String[] args) {
         List<String> arrayList = new ArrayList<>();
@@ -28,7 +27,5 @@ public class Task9 {
             }
         }
         while (answer != true);
-
-
     }
 }

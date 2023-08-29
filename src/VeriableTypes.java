@@ -1,6 +1,5 @@
 public class VeriableTypes {
     public static void main(String[] args) {
-
         //Bu task her veri tipinin bir değişken değere atanarak ekrana verilmesi için yazılmıştır.
         //(0)~(255)
         byte testByte = 126;

@@ -4,7 +4,6 @@ public class Car {
     private int year;
     private String caseType;
     private String gearbox;
-
     public Car(String brand, String model, int year, String caseType, String gearbox) {
         this.brand = brand;
         this.model = model;

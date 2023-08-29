@@ -6,10 +6,8 @@ public class KrediMain {
         krediOgretmen.hesapla();
         KrediUI krediUI=new KrediUI();
         krediUI.krediHesapla(new KrediBase());
-
         KrediBase[] krediBase = new KrediBase[]
                 {new KrediTarim(),new KrediOgretmen()};
-
         for(KrediBase krediBase1:krediBase){
             System.out.println(krediBase1.faizHesapla(1000));
         }

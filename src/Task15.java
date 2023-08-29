@@ -1,6 +1,4 @@
 import java.util.Arrays;
-
-
 public class Task15 {
     public static void main(String[] args) {
         System.out.println(getTotalNumberOfLettersOfNamesLongerThanFive("Ahmet","Mahmut","Durukal"));
@@ -15,5 +13,4 @@ public class Task15 {
                 .mapToInt(String::length)//Stream<Integer>
                 .sum();
     }
-
 }

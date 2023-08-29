@@ -1,12 +1,9 @@
-import javax.imageio.plugins.jpeg.JPEGImageReadParam;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
-
 public class Task19 {
     public static void main(String[] args) {
-
     }
     public static Set<String> getKidNames(List<Task17Manager> people) {
         Set<String> kids = new HashSet<>();

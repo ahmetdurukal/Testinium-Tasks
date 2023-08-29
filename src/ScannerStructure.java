@@ -1,5 +1,6 @@
 import java.util.Arrays;
 import java.util.Scanner;
+
 public class ScannerStructure {
     public static void main(String[] args) {
         Double[] numbers = new Double[10];
@@ -16,6 +17,5 @@ public class ScannerStructure {
         Double average = 0.0;
         average = total / numbers.length;
         System.out.println(average);
-
     }
 }

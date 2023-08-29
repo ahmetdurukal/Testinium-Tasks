@@ -1,9 +1,8 @@
-import java.util.Arrays;
 import java.util.Random;
 import java.util.*;
 import java.util.ArrayList;
 
-public class Task8 {
+public class DoubleArray {
     public static void main(String[] args) {
         int[] numbers1 = new int[10];
         int[] numbers2 = new int[10];

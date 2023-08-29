@@ -7,5 +7,4 @@ public class UsageSplit {
         }
         System.out.println("Array boyutu: " + array.length);
     }
-
 }

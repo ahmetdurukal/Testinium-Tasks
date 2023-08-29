@@ -5,8 +5,5 @@ public class DataBaseMain {
         dataBaseCustomer.getCostumers();
         dataBaseCustomer.dataBaseManager = new DataBaseSql();
         dataBaseCustomer.getCostumers();
-
-
-
     }
 }

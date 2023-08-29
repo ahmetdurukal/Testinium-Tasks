@@ -1,8 +1,6 @@
 import java.util.List;
-
 public class Task18 {
     public static void main(String[] args) {
-
     }
     public static int calculate(List<Integer> numbers) {
         int total = 0;

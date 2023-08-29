@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 import java.util.List;
-
 public class SchoolMain {
     public static void main(String[] args) {
         SchoolStudent schoolStudent= new SchoolStudent("Ahmet","Durukal",20);
@@ -21,10 +20,7 @@ public class SchoolMain {
         lessons.add(matematik);
         lessons.add(fizik);
         schoolStudent.setLessons(lessons);
-
         schoolStudent.setLessons(lessons);
-
-
         schoolStudent.getLessons().forEach(s -> System.out.println(s.getName() +" " + s.getVizeNote() +" " + s.getFinalNote()));
 
         System.out.println(schoolTeacher.allSkills(schoolTeacher));

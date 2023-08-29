@@ -1,10 +1,6 @@
-import javax.sound.midi.Soundbank;
-import java.sql.SQLOutput;
 import java.util.*;
-
 import java.util.stream.Collectors;
 //UpperCase
-
 public class Task14 {
     public static void main(String[] args) {
         System.out.println(mapToUppercase("A","b","c","d"));

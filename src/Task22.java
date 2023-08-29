@@ -1,34 +1,24 @@
-
 import java.util.*;
 import java.lang.Integer;
-
 import java.util.Map;
 public class Task22 {
     public static void main(String[] args) {
         Map<Integer, Integer> student = new HashMap<>();
-        student.put(0, 100);
-        student.put(1, 90);
-        student.put(2, 70);
-        student.put(3, 85);
-        student.put(4, 95);
-
+        student.put(0, 100);student.put(1, 90);student.put(2, 70);student.put(3, 85);student.put(4, 95);
         System.out.println(student);
         Integer maxNote = Integer.MIN_VALUE;
         Integer minNote = Integer.MAX_VALUE;
         int totNote = 0;
-
         for(Map.Entry<Integer,Integer> entry:student.entrySet()){
             int ogrNo= entry.getKey();
             int ogrNot= entry.getValue();
             if (ogrNot<minNote){
                 minNote=ogrNot;
-
             }
             if(ogrNot>maxNote){
                 maxNote=ogrNot;
             }
             totNote=totNote+ogrNot;
-
         }
         int ortNot= totNote/student.size();
         System.out.println(minNote);
